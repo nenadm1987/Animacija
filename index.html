@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Animacija</title>
+
+    <style>
+        #animation {
+            width: 600px;
+            height: 500px;
+            background-color: #050210;
+            margin: 10px auto;
+            position: relative;
+
+
+
+        }
+
+        #circle {
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            transform: translate(151px, 97px);
+            position: absolute;
+
+
+            animation-duration: 1s;
+            animation-name: my-animation;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+
+        }
+
+        @keyframes my-animation {
+            from {
+                transform: translate(151px, 97px) rotate(-360deg);
+
+
+            }
+
+            t0 {
+                transform: translate(151px, 97px) rotate(360deg);
+
+            }
+
+
+        }
+        #blur {
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            transform: translate(1px, 1px);
+            position: absolute;
+            filter: blur(40px);
+
+
+        }
+
+        #circle-2 {
+            background: #050210;
+            border-radius: 100%;
+            width: 250px;
+            height: 250px;
+            transform: translate(25px, 25px);
+            position: absolute;
+
+        }
+        #puls {
+            background: rgba(102, 74, 129, 0.13);
+            border-radius: 100%;
+            width: 250px;
+            height: 250px;
+            transform: translate(176px, 122px);
+            position: absolute;
+
+            animation-duration: 1s;
+            animation-name: puls;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+
+
+
+        @keyframes puls {
+            0% {
+                transform:translate(176px, 122px) scale(0);
+                   
+
+            }
+            50% {
+                transform:translate(176px, 122px) scale(0.5);
+
+            }
+            100% {
+                transform:translate(176px, 122px) scale(1);
+
+            }
+
+
+        }
+
+
+        .circle-1 {
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff)
+        }
+        #blur {
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff)
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div id="animation">
+        <div class="circle-1" id="circle">
+            <div id="blur"></div>
+            <div id="circle-2"></div>
+        </div>
+       <div id="puls"></div>
+        
+    </div>
+
+</body>
+
+</html>
